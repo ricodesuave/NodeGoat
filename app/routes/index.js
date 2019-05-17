@@ -67,7 +67,7 @@ var exports = function(app, db) {
     app.post("/memos", isLoggedIn, memosHandler.addMemos);
 
     // Handle redirect for learning resources link
-    app.post("/learn", isLoggedIn, function(req, res, next) {
+    app.get("/learn", isLoggedIn, function(req, res, next) {
         // Insecure way to handle redirects by taking redirect url from query string
         return res.render('/learn');
     });
