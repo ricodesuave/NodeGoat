@@ -69,7 +69,7 @@ var exports = function(app, db) {
     // Handle redirect for learning resources link
     app.post("/learn", isLoggedIn, function(req, res, next) {
         // Insecure way to handle redirects by taking redirect url from query string
-        return res.redirect(req.query.url);
+        return res.render('/learn');
     });
 
     // Handle redirect for learning resources link
